@@ -2,7 +2,7 @@
 
 set -e
 
-SERVICE_NAME="ebpf-dev"
+SERVICE_NAME="ebpf"
 DOCKER_DIR="./docker"
 
 usage() {
@@ -17,18 +17,18 @@ cd "$DOCKER_DIR"
 
 case "$1" in
     build)
-        echo "🔧 Building Docker image..."
-        docker-compose build "$SERVICE_NAME"
+        echo "Building Docker image..."
+        docker compose build "$SERVICE_NAME"
         ;;
     run)
-        echo "🚀 Running container..."
-        docker-compose run --rm "$SERVICE_NAME"
+        echo "Running container..."
+        docker compose run --rm "$SERVICE_NAME"
         ;;
     both|"")
-        echo "🔧 Building Docker image..."
-        docker-compose build "$SERVICE_NAME"
-        echo "🚀 Running container..."
-        docker-compose run --rm "$SERVICE_NAME"
+        echo "Building Docker image..."
+        docker compose build "$SERVICE_NAME"
+        echo "Running container..."
+        docker compose run --rm "$SERVICE_NAME"
         ;;
     *)
         usage

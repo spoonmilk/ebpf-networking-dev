@@ -1,10 +1,8 @@
-version: "3.8"
-
 services:
   ebpf:
     build:
       context: .
-      dockerfile: docker/Dockerfile
+      dockerfile: ./Dockerfile
     container_name: ebpf-dev
     privileged: true
     working_dir: /home
