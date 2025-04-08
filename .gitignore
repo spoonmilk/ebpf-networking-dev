@@ -1,0 +1,28 @@
+# Build outputs
+/home/build/
+/home/**/*.o
+/home/**/*.out
+/home/**/*.bin
+
+# Logs
+*.log
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*.swn
+.vscode/
+.idea/
+
+# Docker
+docker/.env
+docker/volumes/
+*.tar
+machine-id
+
+# Git
+.git/
