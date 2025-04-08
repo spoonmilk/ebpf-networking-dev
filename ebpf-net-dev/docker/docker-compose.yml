@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  ebpf:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: ebpf-dev
+    privileged: true
+    working_dir: /home
+    volumes:
+      - ../home:/home
+      - /lib/modules:/lib/modules:ro
+    stdin_open: true
+    tty: true
